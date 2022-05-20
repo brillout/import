@@ -1,0 +1,9 @@
+{
+  "name": "@brillout/load-module",
+  "version": "0.1.0",
+  "repository": "github:brillout/load-module",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
