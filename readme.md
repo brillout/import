@@ -1,10 +1,11 @@
 ```js
-// index.js
+// node_modules/@brillout/import/index.js
 
-var loadModule = id => import(/*webpackIgnore: true*/ id)
-module.exports = loadModule
-module.exports.loadModule = loadModule
+var import_ = id => import(/*webpackIgnore: true*/ id)
+module.exports = import_
+module.exports.import_ = import_
 ```
 
-This package will be obsolete once this TypeScript issue is solved:
+Workaround for:
  - [GitHub - TypeScript - Add flag to not transpile dynamic import() when module is CommonJS #43329](https://github.com/microsoft/TypeScript/issues/43329)
+ - [GitHub - TypeScript - Allow ES Module Type-Only Imports from CJS Modules #49721](https://github.com/microsoft/TypeScript/issues/49721)

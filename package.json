@@ -1,7 +1,7 @@
 {
-  "name": "@brillout/load-module",
-  "version": "0.1.1",
-  "repository": "github:brillout/load-module",
+  "name": "@brillout/import",
+  "version": "0.1.2",
+  "repository": "github:brillout/import",
   "license": "MIT",
   "publishConfig": {
     "access": "public"

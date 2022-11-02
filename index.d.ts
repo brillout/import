@@ -1,4 +1,3 @@
-export default loadModule
-export { loadModule }
-// TODO fix type
-declare function loadModule(id: string): any
+export default import_
+export { import_ }
+declare function import_(id: string): any

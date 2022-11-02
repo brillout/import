@@ -1,3 +1,3 @@
-var loadModule = id => import(/*webpackIgnore: true*/ id)
-module.exports = loadModule
-module.exports.loadModule = loadModule
+var import_ = id => import(/*webpackIgnore: true*/ id)
+module.exports = import_
+module.exports.import_ = import_
