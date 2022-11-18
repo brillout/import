@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "CommonJS",
+    "moduleResolution": "NodeNext",
+    "target": "ES2017",
+    "lib": ["ESNext"],
+    "esModuleInterop": true,
+    "outDir": "./dist"
+  },
+  "files": ["./index.ts"]
+}
