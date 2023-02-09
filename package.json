@@ -4,7 +4,7 @@
   "main": "dist/index.js",
   "repository": "github:brillout/import",
   "scripts": {
-    "build": "tsc",
+    "build": "rm -rf dist/ && tsc",
     "prepublishOnly": "pnpm run build",
     "release": "npm version patch && npm publish && git push && git push --tags"
   },
