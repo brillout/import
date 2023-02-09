@@ -4,7 +4,8 @@ export default import_
 import path from 'path'
 
 function import_(id: string) {
-  return import(fixWindowsBug(id))
+  id = fixWindowsBug(id)
+  return import(/*webpackIgnore: true*/ id)
 }
 
 // Avoid:
