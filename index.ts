@@ -1,11 +1,6 @@
 export { import_ }
 export default import_
 
-// https://github.com/unjs/pathe/blob/ae583c899ed9ebf44c94ab451da5fd7c3094dea9/src/path.ts#L197
-function isAbsolute(path: string) {
- return /^[/\\](?![/\\])|^[/\\]{2}(?!\.)|^[A-Za-z]:[/\\]/.test(path)
-}
-
 function import_(id: string) {
   id = fixWindowsBug(id)
   return import(/*webpackIgnore: true*/ id)
@@ -23,4 +18,11 @@ function fixWindowsBug(id: string): string {
   } else {
     return id
   }
+}
+
+// Copied from https://github.com/unjs/pathe/blob/ae583c899ed9ebf44c94ab451da5fd7c3094dea9/src/path.ts#L14
+// Alternative: https://github.com/nodejs/node/blob/49a77a5a996a49e8cb728eed42e55a7c1a9eef6e/lib/path.js#L402
+// - Extracted version: https://github.com/brillout/import/commit/40bd11ce1e11e3b455c87a8cbca653fd10986021
+function isAbsolute(path: string) {
+ return /^[/\\](?![/\\])|^[/\\]{2}(?!\.)|^[A-Za-z]:[/\\]/.test(path)
 }
