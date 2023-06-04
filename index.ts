@@ -26,5 +26,5 @@ function fixWindowsBug(id: string): string {
 // Alternative: https://github.com/nodejs/node/blob/49a77a5a996a49e8cb728eed42e55a7c1a9eef6e/lib/path.js#L402
 // - Extracted version: https://github.com/brillout/import/commit/6127f900bb769354727115cd7ba433fb04815a1b
 function isAbsolute(path: string) {
- return /^[/\\](?![/\\])|^[/\\]{2}(?!\.)|^[A-Za-z]:[/\\]/.test(path)
+  return /^[/\\](?![/\\])|^[/\\]{2}(?!\.)|^[A-Za-z]:[/\\]/.test(path)
 }
