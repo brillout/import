@@ -8,7 +8,7 @@ export default import_
 
 function import_(id: string) {
   id = fixWindowsBug(id)
-  // - Skip webpack from forcefully bunlding dynamic imports with unknown IDs: https://github.com/webpack/webpack/issues/7644#issuecomment-402123392
+  // - Skip webpack from bundling dynamic imports with unknown IDs: https://github.com/webpack/webpack/issues/7644#issuecomment-402123392
   return import(/*webpackIgnore: true*/ id)
 }
 
