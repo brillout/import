@@ -11,7 +11,8 @@
     "@types/node": "^18.11.9",
     "typescript": "^4.9.3"
   },
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": ["dist/"],
   "repository": "github:brillout/import",
   "license": "MIT",
