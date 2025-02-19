@@ -1,6 +1,6 @@
 {
   "name": "@brillout/import",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "dependencies": {},
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
@@ -16,7 +16,9 @@
     "@types/node": "^18.11.9",
     "typescript": "^4.9.3"
   },
-  "files": ["dist/"],
+  "files": [
+    "dist/"
+  ],
   "repository": "github:brillout/import",
   "license": "MIT",
   "publishConfig": {
