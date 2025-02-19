@@ -2,8 +2,13 @@
   "name": "@brillout/import",
   "version": "0.2.3",
   "dependencies": {},
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "main": "./dist/cjs/index.js",
   "scripts": {
-    "build": "rm -rf dist/ && tsc",
+    "build": "rm -rf dist/ && pnpm run build:esm && pnpm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --project ./tsconfig.cjs.json",
     "prepublishOnly": "pnpm run build",
     "release": "npm version patch && npm publish && git push && git push --tags"
   },
@@ -11,8 +16,6 @@
     "@types/node": "^18.11.9",
     "typescript": "^4.9.3"
   },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "files": ["dist/"],
   "repository": "github:brillout/import",
   "license": "MIT",
