@@ -1,6 +1,6 @@
 {
   "name": "@brillout/import",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "dependencies": {},
   "types": "./dist/esm/index.d.ts",
   "module": "./dist/esm/index.js",
