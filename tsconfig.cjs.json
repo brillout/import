@@ -3,7 +3,6 @@
   "compilerOptions": {
     "outDir": "./dist/cjs/",
     "module": "CommonJS",
-    "target": "ES2020",
     "moduleResolution": "NodeNext",
     "declaration": false
   }
