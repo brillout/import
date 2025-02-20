@@ -2,14 +2,22 @@
   "name": "@brillout/import",
   "version": "0.2.4",
   "dependencies": {},
-  "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
-  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "exports": {
+    "worker": "./dist/esm/picocolors.js",
+    "require": "./dist/cjs/picocolors.js",
+    "types": "./dist/esm/index.d.ts",
+    "default": "./dist/esm/picocolors.js"
+  },
+  "type": "module",
   "scripts": {
     "dev": "tsc --watch",
     "build": "rm -rf dist/ && pnpm run build:esm && pnpm run build:cjs",
     "build:esm": "tsc",
-    "build:cjs": "tsc --project ./tsconfig.cjs.json",
+    "build:cjs": "pnpm run build:cjs:ts && pnpm run build:cjs:fixup",
+    "build:cjs:ts": "tsc --project ./tsconfig.cjs.json",
+    "build:cjs:fixup": "node ./dist-cjs-fixup.mjs",
     "prepublishOnly": "pnpm run build",
     "release": "npm version patch && npm publish && git push && git push --tags",
     "reset": "git clean -Xdf && pnpm install && pnpm run build"
