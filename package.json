@@ -1,6 +1,7 @@
 {
   "name": "@brillout/import",
   "version": "0.2.6",
+  "repository": "https://github.com/brillout/import",
   "dependencies": {},
   "types": "./dist/esm/index.d.ts",
   "module": "./dist/esm/index.js",
@@ -29,7 +30,6 @@
   "files": [
     "dist/"
   ],
-  "repository": "github:brillout/import",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
